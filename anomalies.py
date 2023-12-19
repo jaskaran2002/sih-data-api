@@ -3,10 +3,10 @@ import pandas as pd
 import os
 
 
-file_path_1 = './junction_temp.json'
-file_path_2 = './junction_groups.json'
-# file_path_1 = os.getcwd() + '/sih-data-api/' + "junction_temp.json" # for deployment
-# file_path_2 = os.getcwd() + '/sih-data-api/' + "junction_groups.json" # for deployment
+# file_path_1 = './junction_temp.json'
+# file_path_2 = './junction_groups.json'
+file_path_1 = os.getcwd() + '/sih-data-api/' + "junction_temp.json" # for deployment
+file_path_2 = os.getcwd() + '/sih-data-api/' + "junction_groups.json" # for deployment
 
 with open(file_path_1, 'r') as file:
     NODES = json.load(file)
@@ -18,8 +18,8 @@ with open(file_path_2, 'r') as file:
     JUNCTIONS = JUNCTIONS["JUNCTIONS"]
     # print(JUNCTIONS)
 
-df_past = pd.read_csv("./temp_conn_data.csv")
-# df_past = pd.read_csv(os.getcwd() + '/sih-data-api/' + "temp_conn_data.csv") #deployment
+# df_past = pd.read_csv("./temp_conn_data.csv")
+df_past = pd.read_csv(os.getcwd() + '/sih-data-api/' + "temp_conn_data.csv") #deployment
 # df_past = df_past.rename(columns={'Unnamed: 0': 'Date'})
 df_past.set_index(pd.to_datetime(df_past['Unnamed: 0']), inplace=True)
 df_past.drop(labels=["reservoir_1", "reservoir_2", "Unnamed: 0"], axis=1, inplace=True)
