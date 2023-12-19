@@ -1,8 +1,8 @@
 jaskaran2002.pythonanywhere.com
 
 
-GET /flow:
-  Input Json:\
+<h2>GET /flow:</h2>
+  Input Json:
   
     {
       "Date": ,
@@ -10,7 +10,7 @@ GET /flow:
       "Junction_1": junctions related to hostel_O or just do all the junctions
     }
     
-  Output Json:\
+  Output Json:
   
     [
       {
@@ -24,7 +24,7 @@ GET /flow:
 
 
 
-Example INPUT:\
+Example INPUT:
 
 {"hostel_O": 189.34443689099413,\
  "hostel_D": 187.261095850864,\
@@ -54,3 +54,16 @@ Example INPUT:\
  "junction_5": 260.42345611836834,\
  "junction_6": 262.2548039713629,\
  "Date": "2023-01-01 00:00:00"}\
+
+
+
+
+
+<h2>GET /anomaly:</h2>
+  INPUT JSON:
+    
+    {
+      counter: 2592
+    }
+    
+
