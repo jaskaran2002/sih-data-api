@@ -1,5 +1,4 @@
 Flask
 numpy
 pandas
-json
 flask_cors

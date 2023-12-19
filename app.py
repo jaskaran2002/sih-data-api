@@ -21,7 +21,8 @@ def flow():
     print(l)
     try:
         out = []
-        with open('./network_1_pipes.json', 'r') as f:
+        with open(os.getcwd() + '/sih-data-api/' + 'network_1_pipes.json', 'r') as f: # Deployment
+        # with open('./network_1_pipes.json', 'r') as f: # local Testing
             network_pipes = json.load(f)
         for key in l.keys():
             if key == 'Date' or 'junction' in key or 'reservoir' in key:
