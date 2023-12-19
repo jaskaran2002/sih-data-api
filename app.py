@@ -9,8 +9,8 @@ from anomalies import anomalies
 app = Flask(__name__)
 CORS(app)
 
-df_past = pd.read_csv("./temp_conn_data.csv")
-# df_past = pd.read_csv(os.getcwd() + '/sih-data-api/' + "temp_conn_data.csv") #deployment
+# df_past = pd.read_csv("./temp_conn_data.csv")
+df_past = pd.read_csv(os.getcwd() + '/sih-data-api/' + "temp_conn_data.csv") #deployment
 # df_past = df_past.rename(columns={'Unnamed: 0': 'Date'})
 df_past.set_index(pd.to_datetime(df_past['Unnamed: 0']), inplace=True)
 df_past.drop(labels=["reservoir_1", "reservoir_2", "Unnamed: 0"], axis=1, inplace=True)
@@ -28,8 +28,8 @@ def flow():
     print(l)
     try:
         out = []
-        # with open(os.getcwd() + '/sih-data-api/' + 'network_1_pipes.json', 'r') as f: # Deployment
-        with open('./network_1_pipes.json', 'r') as f: # local Testing
+        with open(os.getcwd() + '/sih-data-api/' + 'network_1_pipes.json', 'r') as f: # Deployment
+        # with open('./network_1_pipes.json', 'r') as f: # local Testing
             network_pipes = json.load(f)
         for key in l.keys():
             if key == 'Date' or 'junction' in key or 'reservoir' in key:
@@ -72,8 +72,8 @@ def aaaa():
     # # forecast_df = predicted.iloc[i]
     # forecast_df = predicted
 
-    df = pd.read_csv("./sim_data_sensor.csv")
-    # df = pd.read_csv(os.getcwd() + '/sih-data-api/' + "sim_data_sensor.csv") # deployment
+    # df = pd.read_csv("./sim_data_sensor.csv")
+    df = pd.read_csv(os.getcwd() + '/sih-data-api/' + "sim_data_sensor.csv") # deployment
     # print(len(df_past))
 
     df = pd.concat([df_past,df])
@@ -82,8 +82,8 @@ def aaaa():
     df = pd.DataFrame(df)#.transpose() 
 
 
-    actual_df = pd.read_csv("./network_1_sim_results.csv")
-    # actual_df = pd.read_csv(os.getcwd() + '/sih-data-api/' + "network_1_sim_results.csv") #deployment
+    # actual_df = pd.read_csv("./network_1_sim_results.csv")
+    actual_df = pd.read_csv(os.getcwd() + '/sih-data-api/' + "network_1_sim_results.csv") #deployment
 
     df.drop_duplicates(inplace=True)
     df.set_index(pd.to_datetime(df["Unnamed: 0"]),inplace=True)
