@@ -1,0 +1,49 @@
+{"JUNCTIONS" :{
+    "junction_1": [
+        "hostel_D",
+        "hostel_O",
+        "hostel_C",
+        "hostel_B",
+        "hostel_M",
+        "junction_2",
+        "junction_3"
+        
+    ],
+    "junction_2": [
+        "cos_complex",
+        "synthetic_running_track",
+        "junction_1"
+    ],
+    "junction_3": [
+        "hostel_A",
+        "hostel_H",
+        "hostel_PG",
+        "hostel_Q",
+        "junction_1",
+        "hostel_j",
+        "junction_4",
+        "reservoir_1"
+    ],
+    "junction_4": [
+        "hostel_K",
+        "pool",
+        "junction_3",
+        "junction_5"
+    ],
+    "junction_5": [
+        "library",
+        "hostel_I",
+        "junction_4",
+        "junction_6"
+    ],
+    "junction_6": [
+        "admin_block",
+        "G_block",
+        "F_block",
+        "D_block",
+        "E_block",
+        "junction_5",
+        "reservoir_2"
+    ]
+}
+}
