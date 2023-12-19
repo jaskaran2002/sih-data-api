@@ -10,7 +10,8 @@ CORS(app)
 
 @app.route('/')
 def hello():
-    return os.getcwd()
+    temp =  os.getcwd()
+    return Response(json.dumps({'path': temp}), mimetype='application/json', status=200)
     return "hello world"
 
 
