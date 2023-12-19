@@ -3,20 +3,25 @@ jaskaran2002.pythonanywhere.com
 
 GET /flow:
   Input Json:
+    ```
     {
       "Date": ,
       "Hostel_O" : value of hostel O,
       "Junction_1": junctions related to hostel_O or just do all the junctions
     }
+    ```
   Output Json:
+    ```
     [
       {
         "node name": ,
         "timestamp": ,
         "flow_rate": ,
-        
-      }
+        }
     ]
+    ```
+     
+
 
 
 Example INPUT:
