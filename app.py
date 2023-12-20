@@ -60,10 +60,11 @@ def flow():
     
 
 
-@app.get('/anomaly')
-def aaaa():
+@app.get('/group')
+def group():
     l = request.get_json()
     i = l['counter']
+    print(i)
     stamp = i
     # actual = pd.read_csv('./sim_data_sensor.csv')
     # pressure = pd.DataFrame(actual.iloc[i]).T
