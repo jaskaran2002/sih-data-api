@@ -2,4 +2,3 @@ Flask
 numpy
 pandas
 flask_cors
-gunicorn
